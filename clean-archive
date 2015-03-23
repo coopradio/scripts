@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# This lives on the logger at /etc/cron.hourly/clean-archive
+find "/archive" -type f ! -newermt "40 days ago" -print0 | xargs -0 rm; 
+find "/mnt/bkup/log.backup/archive" -type f ! -newermt "40 days ago" -print0 | xargs -0 rm;
