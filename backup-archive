@@ -1,0 +1,3 @@
+#!/bin/bash
+# This lives on the logger at /etc/cron.hourly/backup-archive
+rsync -av /archive /mnt/bkup/log.backup
