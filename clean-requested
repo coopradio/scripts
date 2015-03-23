@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# This lives on the logger at /etc/cron.hourly/clean-requested
+find "/var/www/requested" -type f ! -newermt "1 days ago" -print0 | xargs -0 rm; 
